@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>metalbrush</title>
+</head>
+<header style="height: 200px;">
+    
+</header>
+
+<body>
+    <div id="metalbrush" style="width: 400px; margin: auto;">
+        <center><img src= metalbrushhead.png width="400" height="400"></center>
+            <style>
+            img:hover {
+                cursor: default;
+                transform: rotate(3600deg);
+                transition: all 14s ease-in-out 0s;
+            }
+            </style>
+    </div>
+    <audio id="metalbrushspin" src="./pin-sound.mp3"></audio>
+
+    <script>
+            var soundboxDiv = document.getElementById("metalbrush");
+            var audio = document.getElementById("metalbrushspin");
+
+            soundboxDiv.addEventListener("mouseenter", function() {
+                audio.play();
+            });
+
+            soundboxDiv.addEventListener("mouseleave", function() {
+                audio.load();
+            });
+    
+    </script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <header style="height: 200px;">
+</header>
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="sandydog">
+  <img src="sandy.png" alt="sandyspic" class="image">
+  <div class="overlay">
+         <img src="sandygrave.png" alt="sandygravepic" class="image">
+
+  </div>
+</div>
+<audio id="birds" src="https://s3.amazonaws.com/rosalienorris/416529__inspectorj__bird-whistling-single-robin-a.wav"></audio>
+
+    <script>
+    var soundboxDiv = document.getElementById("sandydog");
+    var audio = document.getElementById("birds");
+    soundboxDiv.addEventListener("mouseenter", function() {audio.play()
+    });
+    soundboxDiv.addEventListener("mouseleave", function() {audio.pause()
+    });
+    </script>
+</body>
+</html>

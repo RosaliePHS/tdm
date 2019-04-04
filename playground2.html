@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>turtlepin</title>
+</head>
+<header style="height: 150px;">
+</header>
+
+<body>
+    <div id="turtlepin">
+        <img src=turtlepin.png width="300" height="200">
+        <style>
+        img:hover {
+            animation-duration: 5s;
+            animation-name: slidein;
+            position: relative;
+            animation-timing-function: ease-in-out 3s;
+
+        }
+
+        @keyframes slidein {
+             0%   {left:0px; top:0px;}
+             10%   {left: 100px; top:50px; transform: rotate(15deg);}
+             20%   {left: 200px; top:0px;transform: rotate(-15deg);}
+             30%   {left: 300px; top:50px;transform: rotate(15deg);}
+             40%   {left: 400px; top:0px;transform: rotate(-15deg)}
+             50%  {left:500px; top:50px;transform: rotate(15deg);}
+             60%  {left:600px; top:0px;transform: rotate(-15deg)}
+             70%  {left:700px; top:50px;transform: rotate(15deg);}
+             80%  {left:800px; top:0px;transform: rotate(-15deg)}
+             90%  {left:900px; top:50px;transform: rotate(15deg);}
+             99%  {left:1000px; top:0px;transform: rotate(-15deg)}
+        }
+
+        </style>
+    
+</body>
+
+</html>

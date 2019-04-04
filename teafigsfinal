@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>teafigs</title>
+</head>
+<header style="height: 350px;">
+	</header>
+    <body>
+        <div id="teafigurines">
+        <center><img id="teafigs" src="red-rose.png"/></center>
+       
+        <script type="text/javascript">
+            var images = ['tiger2.png', 'camel.png', 'elephant.png', 'hippo.png','goldfish.png', 'lemur.png', 'owl.png', 'raccoon.png', 'wolf.png', 'bird.png'],
+                i = 1;
+
+            
+            for (var j=images.length; j--;) {
+                var img = new Image();
+                img.src = images[j];
+            }
+
+            
+            document.getElementById('teafigs').addEventListener('click', function() {
+                this.src = images[i >= images.length - 1 ? i = 0 : ++i];
+            }, false);
+
+        </script>
+         <style>
+        img:hover {
+            animation-duration: 4s;
+            animation-name: wobble;
+            position: relative;
+            animation-iteration-count: infinite;
+            
+        }
+
+        @keyframes wobble {
+             0%   {transform: rotate(-15deg);}
+             10%   {transform: rotate(15deg);}
+             20%   {transform: rotate(-15deg);}
+             30%   {transform: rotate(15deg);}
+             40%   {transform: rotate(-15deg)}
+             50%  {transform: rotate(15deg);}
+             60%  {transform: rotate(-15deg)}
+             70%  {transform: rotate(15deg);}
+             80%  {transform: rotate(-15deg)}
+             90%  {transform: rotate(15deg);}
+             99%  {transform: rotate(-15deg)}
+        }
+        </style>
+    </div>
+    </body>
+
+</html>

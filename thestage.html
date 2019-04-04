@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tiny Digital Materpieces</title>
+</head>
+<body>
+
+	<div id="stage">
+
+	</div>
+
+<style type="text/css">
+			#stage {
+				width:1000px;
+				height: 500px;
+				border-style: solid;
+				border-color: black;
+				background-image: url(camel.png)
+			}
+
+			
+		</style>
+		
+<script type="text/javascript">
+	var tdmlist = ['tiger2.png', 'camel.png', 'elephant.png', 'hippo.png','goldfish.png', 'lemur.png', 'owl.png', 'raccoon.png', 'wolf.png', 'bird.png'];
+	var counter = 0;
+document.getElementById('stage').addEventListener('click', function() {
+	counter = (counter + 1)%tdmlist.length;
+	console.log(counter);
+	this.style.backgroundImage = "url("+ tdmlist[counter] + ")";
+
+}) 
+
+</script>
+
+</body>
+</html>

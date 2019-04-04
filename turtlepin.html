@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>turtlepin</title>
+</head>
+<header style="height: 150px;">
+</header>
+
+<body>
+    <div id="turtlepin">
+        <img src=turtlepin.png width="300" height="200">
+        <style>
+        img:hover {
+            animation-duration: 26s;
+            animation-name: slidein;
+            animation-timing-function: ease-in-out 3s;
+
+        }
+
+        @keyframes slidein {
+            from {
+                margin-right: 0%;
+                width: 300px;
+            }
+
+            to {
+                margin-left: 130%;
+                width: 300px;
+            }
+        }
+        </style>
+    </div>
+    <audio id="turtlepinaudio" src="https://s3.amazonaws.com/rosalienorris/slide-whistle-up-sound-effect.mp3"> </audio>
+    <script>
+    var soundboxDiv = document.getElementById("turtlepin");
+    var audio = document.getElementById("turtlepinaudio");
+    soundboxDiv.addEventListener("mouseenter", function() {
+        audio.play()
+    });
+    soundboxDiv.addEventListener("mouseleave", function() {
+        audio.load()
+    });
+    </script>
+</body>
+
+</html>
